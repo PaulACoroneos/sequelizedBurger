@@ -1,0 +1,51 @@
+html,body {
+    background-color:lightyellow;
+}
+#bun-top {
+    background-color:rgba(229,203,122,0.9);
+    border-radius:25px 25px 5px 5px;
+    border: 2px black solid;
+    padding:15px;
+}
+
+#lettuce {
+    background-color:rgba(50,199,4,0.8);
+    border: 1px black solid;
+    padding:10px;
+    border-radius: 10px;
+}
+
+#tomato {
+    background-color:rgba(236,53,33,0.8);
+    border: 1px black solid;
+    padding:10px;  
+    border-radius: 10px;  
+}
+
+#patty {
+    background-color:rgba(69,1,1,0.6);
+    border: 1px black solid;
+    padding:10px; 
+    border-radius: 10px;   
+}
+
+#bun-bottom {
+    background-color:rgba(229,203,122,0.9);
+    border-radius:5px 5px 25px 25px;
+    border: 2px black solid;
+    padding:15px;
+}
+ul {
+    list-style: none;
+    padding-left:0px;
+}
+li {
+    border: 1px solid black;
+    margin:5px;
+    border-radius:10px;
+    padding:5px;
+    background-color:rgba(255,255,255,0.7);
+}
+.section-header {
+    font-size:25px;
+}

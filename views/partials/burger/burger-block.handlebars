@@ -1,0 +1,16 @@
+<li>
+	<div class="container">
+		<div class="row">
+			<div class="col-6 text-left" >
+				{{burger_name}}
+			</div>
+			<div class="col-6">
+				{{#if devoured}}
+				<button class="change-devoured btn btn-lrg btn-danger float-left" data-id="{{id}}" data-newdevoured="{{devoured}}">Devour time!</button>
+				{{else}}
+				<button class="change-devoured btn btn-lrg btn-success float-left" data-id="{{id}}" data-newdevoured="{{devoured}}">Make a new burger!</button>
+				{{/if}}
+			</div>
+		</div>
+	</div>
+</li>

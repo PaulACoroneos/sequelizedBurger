@@ -3,6 +3,7 @@ module.exports = (sequelize, DataTypes) => {
     'Burgers',
     {
       burgerName: DataTypes.STRING,
+      devoured: DataTypes.BOOLEAN,
     },
     {}
   );

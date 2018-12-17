@@ -1,26 +1,19 @@
 const db = require('../models');
 
-const exports = (module.exports = {});
-
+// const exports = (module.exports = {});
 // Create all our routes and set up logic within those routes where required.
-exports.get('/', (req, res) => {
-  db.burger.all(data => {
-    const hbsObject = {
-      burger: data,
-    };
-    console.log(hbsObject);
-    res.render('index', hbsObject);
-  });
-});
+module.exports.get = function(req, res) {
+  res.render('index');
+};
 
-exports.post('/api/burger', (req, res) => {
+module.exports.post = function(req, res) {
   db.burger.create(['burger_name'], [req.body.name], result => {
     // Send back the ID of the new quote
     res.json({ id: result.insertId });
   });
-});
+};
 
-exports.put('/api/burger/:id', (req, res) => {
+module.exports.put = function(req, res) {
   const condition = `id = ${req.params.id}`;
 
   console.log('condition', condition);
@@ -38,16 +31,16 @@ exports.put('/api/burger/:id', (req, res) => {
       res.status(200).end();
     }
   );
-});
+};
 
-exports.delete('/api/burger/:id', (req, res) => {
+module.exports.delete = function(req, res) {
   const condition = `id = ${req.params.id}`;
 
-  burger.delete(condition, result => {
+  db.burger.delete(condition, result => {
     if (result.affectedRows === 0) {
       // If no rows were changed, then the ID must not exist, so 404
       return res.status(404).end();
     }
     res.status(200).end();
   });
-});
+};
